@@ -9,7 +9,10 @@
 #'   provides the replacement value.
 #'
 #'   The LHS must evaluate to a logical vector. The RHS does not need to be
-#'   logical, but all RHSs must evaluate to the same type of vector.
+#'   logical, but all RHSs must evaluate to the same type of vector. This
+#'   can lead to errors when using `NA` in the RHS, since it's a constant
+#'   of type logical. See [Missing values][base::NA] documentation or the
+#'   examples section below for alternatives.
 #'
 #'   Both LHS and RHS may have the same length of either 1 or `n`. The
 #'   value of `n` must be consistent across all cases. The case of
